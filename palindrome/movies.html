@@ -1,0 +1,20 @@
+<!--movie template-->
+
+
+<html>
+	<body>
+	Movie title: {{name}} <br> 
+	The length of this movie is: {{length}} minutes. <br>
+	This movie has {{num_reviews}} reviews. <br>
+	It has been rated {{stars}} stars. <br>
+
+	{%if num_reviews>30 and stars>3 %}
+			This movie must be great!
+	{% elif num_reviews<5 and stars <5 %}
+		Im not sure about this movie
+	{% elif num_reviews == 0 %}
+			This movie needs some reviews. Be the first to review
+	{%endif%}
+
+	</body>
+</html>

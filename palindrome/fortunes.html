@@ -1,0 +1,18 @@
+<html>
+	<body>
+		{% if random_fortune == 'good' %}
+	<h1> {{random_fortune}} </h1>
+		{% elif random_fortune == 'mysterious' %}
+	<h2> {{random_fortune}} </h2>
+	{% else %}
+		{{random_fortune}}
+	{% endif % }
+
+	<ul> 
+	{% for f in all_fortunes %}
+		<li> {{f}} </li>
+	{% endfor %}
+	</ul>
+
+	</body>
+</html>
